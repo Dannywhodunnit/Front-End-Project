@@ -1,0 +1,191 @@
+
+* {
+    display: block;
+}
+:root {
+    background-color: black;
+}
+
+header,
+body, h1 {
+ 
+    text-align: right;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bolder;
+}
+p {
+    color: gold;
+}
+
+.top-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.title,
+.subtitle {
+    color: white;
+    text-align: right;
+    margin-block-end: 40%;
+}
+
+.total {
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Get separation from secondary content */
+}
+
+.secondary-content {
+    padding: 10px; /* Get separation from main content */
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.top-dog {
+    color: white;
+    text-align: center;
+}
+
+
+/*style the text containers in images*/
+.container {
+    position: relative; 
+    max-width: 800px;  
+    margin: 0 auto; 
+}
+
+.container .content {
+    position: absolute; 
+    bottom: 0; /* Place the text container at the bottom  */ 
+    background: rgba(0, 0, 0, 0.6); /* Black background with 0.6 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; 
+}
+
+/* Style the Education section */
+
+.education {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Drop down below images, above form */
+    color: black;
+    background-color: lightgray;
+    border-radius: 2%;
+    padding-right: 5px; /* Expand box out to improve text visibility */
+}
+
+.contact {
+    background-color: yellowgreen;
+    border-radius: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    padding-left: 10px;    
+    padding-right: 10px;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+}
+
+.entry {
+    font-weight: bold; /*Name, Email, Select Your Subjects, and Send a Message */
+}
+
+input, textarea, button
+{ 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 10px;
+    border-radius: 1em;
+    cursor: pointer;
+}
+input[type="text"], input[type="email"], textarea 
+{ 
+    display: block; 
+    width: 300px; 
+    height: 3em;
+    font-size: 100%;  
+    background-color: whitesmoke;
+}
+
+input[type="checkbox"] 
+{ 
+    width: 13px; 
+    display: inline;
+}
+button {
+    width: 10em;
+    height: 4em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+
+
+/* icon styling for social media links */
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* hover effect */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Twitter specific icon details */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* LinkedIn specific icon details */
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+/* ================================================= 
+                    Media Queries
+==================================================== */
+
+/* Target tablets and smaller screens */
+/* smaller screen sends the education container between last image and form in a single column format */
+
+@media (max-width: 900px) {
+    .total{
+        justify-content: center; 
+        flex-flow: column;
+    }
+    
+    .education {
+        text-align: center;
+    }
+}
